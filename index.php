@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Aprendiedo git</title>
+	<title>Aprendiedo git Noel modificacion</title>
 </head>
 <body>
 	<h1>REPOSITORIO INICIAL</h1>
+	<img src="http://i.tuselva.com/2015/01/20-datos-curiosos-que-no-sab%C3%ADas-de-los-gatos.jpg">
 	
 </body>
 </html>
