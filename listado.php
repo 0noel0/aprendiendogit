@@ -1,83 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Listado de personas Registradas</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="js/bootstrap.min.js"	></script>
+  <title>Aprendiendo Git</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 
+<div class="container">
+  <div class="jumbotron" style="background: url('img/misifu.jpg') no-repeat center center; background-size: 100%;">
+    <h1 style="color: white;">Comenta sobre Gatos :D !</h1>      
+    <p style="color: black;">Esta página fue creada con la intencion de aprender a usar Git con multiples desarrolladores...</p>      
+   	<a href="template.php" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-pencil"></span> Comentar</a>
 
-	<?php 
-			
-			//$handler = curl_init("http://localhost/aprendiendogit/api/getlist.php");  
-			//$response = curl_exec ($handler);  
-			//curl_close($handler);  
-			//$arreglo = array();
-			//$arreglo=json_decode($response); 
-			//echo $arreglo=json_decode($response); 
+  </div>
 
-	?>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#">Comentarios</a></li>
+  </ul>
 
+  <div class="row">
+  	<h1>Lista de Comentarios a Gatos :D </h1>
+   <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Comentario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php 
+      $data = file_get_contents("http://localhost/aprendiendogit/api/getlist.php");
+      $products = json_decode($data, true);
 
-	<header>
-		<h1>Listado de Personas Registradas</h1>
-	</header>
+      foreach ($products as $row) {
+         echo "<tr>"; 
+          echo "<td>$row[id]</td>"; 
+          echo "<td>$row[nombre]</td>";  
+          echo "<td>$row[email]</td>";  
+          echo "<td>$row[comentario]</td>";  
+        echo "</tr>"; 
+      }
+      ?>
+    </tbody>
 
-	<table class="table table-striped">
-		<thead>
-			<tr>
-				<th>#</th>
-				<th>Nombre</th>
-				<th>Email</th>
-				<th>Comentario</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php 
+  </table>
+  <footer>
 
-			/*
-			$handler = curl_init("http://localhost/aprendiendogit/api/getlist.php");  
-			//$response = curl_exec ($handler);  
-			 
-			$arreglo = array();
-			//$arreglo=json_decode($response); 
-			echo $arreglo=json_decode(curl_exec ($handler)); 
-			
-			curl_close($handler); 
+  </footer>
+</div>
 
-			foreach($arreglo as $row) { 
-				echo "<tr>"; 
-					echo "<td>$row[id]</td>"; 
-					echo "<td>$row[nombre]</td>";  
-					echo "<td>$row[email]</td>";  
-					echo "<td>$row[comentario]</td>";  
-				echo "</tr>";  
-			}
-			*/
-
-			$data = file_get_contents("http://localhost/aprendiendogit/api/getlist.php");
-			$products = json_decode($data, true);
-
-			foreach ($products as $row) {
-			   echo "<tr>"; 
-					echo "<td>$row[id]</td>"; 
-					echo "<td>$row[nombre]</td>";  
-					echo "<td>$row[email]</td>";  
-					echo "<td>$row[comentario]</td>";  
-				echo "</tr>"; 
-			}
-			?>
-		</tbody>
-
-	</table>
-	<footer>
-		<h3>All Rigth reserverd ;) </h3>
-		
-
-	</footer>
 </body>
 </html>
