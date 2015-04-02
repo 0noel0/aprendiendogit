@@ -16,7 +16,7 @@
   <div class="jumbotron" style="background: url('img/misifu.jpg') no-repeat center center; background-size: 100%;">
     <h1 style="color: white;">Comenta sobre Gatos :D !</h1>      
     <p style="color: black;">Esta página fue creada con la intencion de aprender a usar Git con multiples desarrolladores...</p>      
-   	<a href="template.php" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-pencil"></span> Comentar</a>
+   	<a href="index.php" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-pencil"></span> Comentar</a>
 
   </div>
 
