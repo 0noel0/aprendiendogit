@@ -10,19 +10,6 @@
 </head>
 <body>
 
-
-	<?php 
-			
-			//$handler = curl_init("http://localhost/aprendiendogit/api/getlist.php");  
-			//$response = curl_exec ($handler);  
-			//curl_close($handler);  
-			//$arreglo = array();
-			//$arreglo=json_decode($response); 
-			//echo $arreglo=json_decode($response); 
-
-	?>
-
-
 	<header>
 		<h1>Listado de Personas Registradas</h1>
 	</header>
@@ -59,7 +46,7 @@
 			}
 			*/
 
-			$data = file_get_contents("http://localhost/aprendiendogit/api/getlist.php");
+			$data = file_get_contents("http://localhost/gitinit/aprendiendogit/api/getlist.php");
 			$products = json_decode($data, true);
 
 			foreach ($products as $row) {
