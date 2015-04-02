@@ -6,8 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="js/bootstrap.min.js"	></script>
-     <script src="js/jquery.min.js"	></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+   
    
 </head>
 <body>
@@ -20,7 +21,7 @@
 
 	<h1>Dejar comentarios a Gatos !!!</h1>
 
-<form  class ='form-horizontal' action="comentario.php" method="post" name="formulario">
+<form  class ='form-horizontal' action='comentario.php' method="post" name="formulario">
 
 <div class="form-group">
 
@@ -42,14 +43,14 @@
   <div class="form-group">
     <label for="textarea1" class='col-sm-2 control-label'>Comentario</label>
 	<div class="col-sm-6">
-    	<textarea name='comentario' class="form-control" rows="3"></textarea>
+    	<textarea name='comentario' class="form-control" rows="3" minlength='5'></textarea>
   </div>
  </div>
 
 <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
 
-  <button type="submit" class="btn btn-primary"> <i class='glyphicon glyphicon-bookmark'></i>Comentar</button>
+  <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> <i class='glyphicon glyphicon-bookmark'></i>Comentar</button>
 
   </div>
   </div>
@@ -63,9 +64,6 @@
 
 
 
-
-
-	
 
 
 	

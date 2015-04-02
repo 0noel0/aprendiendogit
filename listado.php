@@ -11,6 +11,7 @@
 </head>
 <body>
 
+
 <div class="container">
   <div class="jumbotron" style="background: url('img/misifu.jpg') no-repeat center center; background-size: 100%;">
     <h1 style="color: white;">Comenta sobre Gatos :D !</h1>      
@@ -55,6 +56,6 @@
 
   </footer>
 </div>
-
+	
 </body>
 </html>
