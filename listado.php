@@ -9,7 +9,7 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="background: url('img/fondo.jpg') no-repeat center center; background-size: cover; background-attachment:fixed;">
 
 
 <div class="container">
